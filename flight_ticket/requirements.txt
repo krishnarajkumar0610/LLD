@@ -1,0 +1,13 @@
+# 1. Book tickets
+# 2. Booking conditions:
+#     a. Each flight has 50 seats
+#     b. Get passenger details along with flight name
+#        and seats required
+#     c. Ticket starting price is 5K rupees
+#     d. After every successful booking, price increases by 200 rupees
+# 3. Cancel tickets
+# 4. Cancel conditions:
+#     a. Refund amount
+#     b. Price reduces by 200 rupees for every cancelled
+#        tickets
+# 5. Print flight details with passengers
