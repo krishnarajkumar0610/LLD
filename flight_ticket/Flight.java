@@ -24,6 +24,13 @@ public class Flight {
         isAvailable = true;
     }
 
+    public String toString() {
+        return "Flight Id: " + flightId +
+                "\nFlight Name: " + flightName +
+                "\nAvailable tickets for " + flightName + " is: " + tickets +
+                "\nAmount per ticket for " + flightName + " is: " + price;
+    }
+
     public static Flight buildFlight(int index) {
         return new Flight(flightNames[index]);
     }
@@ -58,13 +65,7 @@ public class Flight {
             return;
         }
         for (Passenger passenger : commmonPassengersDatas) {
-            System.out.println("Passenger's flight Id:" + passenger.flightId);
-            System.out.println("Passenger's flight Name:" + passenger.passengerFlightName);
-            System.out.println("Passenger's name:" + passenger.passengerName);
-            System.out.println("Passenger's age:" + passenger.passengerAge);
-            System.out.println("Passenger's contact no:" + passenger.passengerContact);
-            System.out.println("Passenger booked seats:" + passenger.passengerSeatsReq);
-            System.out.println("Total amount for booking " + passenger.passengerSeatsReq + " is:" + passenger.totalAmt);
+            System.out.print(passenger);
             System.out.println();
         }
     }
@@ -73,10 +74,7 @@ public class Flight {
         System.out.println("Welcome to madurai airport. Our available flights are....");
         for (Flight flight : flights) {
             if (flight.tickets != 0) {
-                System.out.println("Flight Id: " + flight.flightId);
-                System.out.println("Flight Name: " + flight.flightName);
-                System.out.println("Available tickets for " + flight.flightName + " is: " + flight.tickets);
-                System.out.println("Amount per ticket for " + flight.flightName + " is: " + flight.price);
+                System.out.print(flight);
                 System.out.println();
             }
         }
