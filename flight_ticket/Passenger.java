@@ -22,6 +22,13 @@ public class Passenger {
         this.totalAmt = 0;
     }
 
+    public String toString() {
+        return "Passenger's flight Id:" + flightId + "\nPassenger's flight Name:" + passengerFlightName
+                + "\nPassenger's name:" + passengerName + "\nPassenger's age:" + passengerAge
+                + "\nPassenger's contact no:" + passengerContact + "\nPassenger booked seats:" + passengerSeatsReq
+                + "\nTotal amount for booking " + passengerSeatsReq + " is:" + totalAmt;
+    }
+
     public static Passenger createPasenger() {
         Scanner passengerInp = new Scanner(System.in);
         System.out.print("Enter name:");
